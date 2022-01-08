@@ -41,7 +41,7 @@ public sealed class OhnoCompiler
         for (int i = 0; i < variables.Count; i++)
             dict[variables[i]] = i;
 
-        var method = new DynamicMethod("Guid.NewGuid().ToString()", typeof(int), variables.Select(_ => typeof(int)).ToArray());
+        var method = new DynamicMethod(Guid.NewGuid().ToString(), typeof(int), variables.Select(_ => typeof(int)).ToArray());
         var gen = method.GetILGenerator();
         GenerateIL(gen, source, dict);
         gen.Emit(OpCodes.Ret);
