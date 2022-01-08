@@ -6,6 +6,8 @@ It only supports commands `add`, `mul`, and `print` and integers as values.
 
 So um, it has tokens, lexer, AST, parser, interpreter, and compiler to IL.
 
+## What it can
+
 E. g. take this code:
 ```cs
 var source = @"
@@ -44,3 +46,9 @@ var compiler = new OhnoCompiler();
 Func<int, int, int> func = compiler.Compile(ast, "a", "b");
 func(5, 10);
 ```
+
+## Why???
+
+Because how else would you spend an evening???
+
+Wrote this thing in 1.5 hour, gotta get back to reading a book.
